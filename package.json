@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "./bin/build-css",
+    "watch-css": "./bin/watch-css"
+  },
+  "author": "Simone Trucco",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.0"
+  }
+}
