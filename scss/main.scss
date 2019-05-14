@@ -1,10 +1,81 @@
 .home-hero {
+  //background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
+  background-image: url("assets/Simone-2.jpg");
+  opacity: 1;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   height: 100vh;
-  background-image: url("assets/hero.jpg");
-  .overlay {
-    height: 100%;
-    background-color: $black;
-    opacity: .7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .hero-container {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 5%;
+    .hero-title {
+      h1 {
+        font-size: 4rem;
+        color: $black;
+      }
+    }
+    .hero-intro {
+      max-width: 45%;
+      margin-top: 50px;
+      p {
+        text-align: right;
+        line-height: 2rem;
+      }
+    }
+    .socials-container {
+      display: flex;
+      position: absolute;
+      bottom: 25px;
+      right: 4%;
+      a {
+        font-size: 2rem;
+        color: $black;
+      }
+      .linkedin {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+.about-me {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .about-container {
+    background-color: $white;
+    padding: 25px;
+    -webkit-box-shadow: 7px 7px 8px 0px rgba(199,199,199,1);
+    -moz-box-shadow: 7px 7px 8px 0px rgba(199,199,199,1);
+    box-shadow: 7px 7px 8px 0px rgba(199,199,199,1);
+    max-width: 1240px;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    .absolute-square {
+      position: absolute;
+      height: 250px;
+      width: 250px;
+      border: 4px solid black;
+      top: -40px;
+      left: -40px;
+      z-index: -9;
+    }
   }
 }
 

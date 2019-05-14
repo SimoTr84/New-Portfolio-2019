@@ -1,86 +1,149 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Raleway:400,700,800");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Montserrat:400,700");
+* {
+  padding: 0;
+  margin: 0; }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Libre Baskerville", "serif"; }
+  font-family: "Libre Baskerville", monospace; }
 
 body {
-  font-family: "Raleway", "sans-serif"; }
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif; }
 
-header {
-  height: 5rem; }
-  header .mobile-menu {
+header .mobile-menu {
+  position: fixed;
+  top: 2rem;
+  right: 4%;
+  z-index: 99999999;
+  width: 48px;
+  height: 36px; }
+  header .mobile-menu .hamburger {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+    padding: 5px;
+    overflow: hidden; }
+    header .mobile-menu .hamburger span {
+      position: absolute;
+      width: 80%;
+      height: 3px;
+      background-color: #000000;
+      left: 10%;
+      -webkit-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+      header .mobile-menu .hamburger span:nth-child(2) {
+        top: 16px; }
+      header .mobile-menu .hamburger span:nth-child(3) {
+        top: 27px; }
+  header .mobile-menu nav {
     position: fixed;
-    top: 2rem;
-    right: 4%;
-    z-index: 99999999;
-    width: 48px;
-    height: 36px; }
-    header .mobile-menu .hamburger {
-      position: relative;
-      height: 100%;
-      z-index: 1;
-      cursor: pointer;
-      padding: 5px;
-      overflow: hidden; }
-      header .mobile-menu .hamburger span {
-        position: absolute;
-        width: 80%;
-        height: 3px;
-        background-color: #000;
-        left: 10%;
-        -webkit-transition: all .25s ease-in-out;
-        transition: all .25s ease-in-out;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px; }
-        header .mobile-menu .hamburger span:nth-child(2) {
-          top: 16px; }
-        header .mobile-menu .hamburger span:nth-child(3) {
-          top: 27px; }
-    header .mobile-menu nav {
-      position: fixed;
-      width: 20vw;
-      height: 100vh;
-      top: 0;
-      left: 100%;
-      color: #112236;
-      transition: all 1s ease-in-out;
-      -webkit-transition: all 1s ease-in-out;
+    width: 20vw;
+    height: 100vh;
+    top: 0;
+    right: 100%;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    header .mobile-menu nav ul {
+      text-transform: uppercase;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
       display: flex;
-      align-items: center;
-      justify-content: center; }
-      header .mobile-menu nav ul {
-        text-transform: uppercase;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start; }
-        header .mobile-menu nav ul li {
-          padding: 10px 0;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start; }
+      header .mobile-menu nav ul li {
+        padding: 10px 0;
+        text-align: left; }
+        header .mobile-menu nav ul li a {
+          color: #000000;
+          text-decoration: none;
+          font-size: 1.4em;
           text-align: left; }
-          header .mobile-menu nav ul li a {
-            text-decoration: none;
-            font-size: 1.4em;
-            text-align: left; }
-    header .mobile-menu.open span:nth-child(1) {
-      transform: rotateZ(45deg);
-      top: 16px; }
-    header .mobile-menu.open span:nth-child(2) {
-      transform: translateX(-100%);
-      opacity: 0; }
-    header .mobile-menu.open span:nth-child(3) {
-      transform: rotateZ(-45deg);
-      top: 16px; }
-    header .mobile-menu.open nav {
-      left: 80%; }
+  header .mobile-menu.open span:nth-child(1) {
+    transform: rotateZ(45deg);
+    top: 16px; }
+  header .mobile-menu.open span:nth-child(2) {
+    transform: translateX(-100%);
+    opacity: 0; }
+  header .mobile-menu.open span:nth-child(3) {
+    transform: rotateZ(-45deg);
+    top: 16px; }
+  header .mobile-menu.open nav {
+    right: 80%; }
 
 .home-hero {
+  background-image: url("assets/Simone-2.jpg");
+  opacity: 1;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   height: 100vh;
-  background-image: url("assets/hero.jpg"); }
-  .home-hero .overlay {
-    height: 100%;
-    background-color: #000000;
-    opacity: .7; }
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .home-hero .hero-container {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 5%; }
+    .home-hero .hero-container .hero-title h1 {
+      font-size: 4rem;
+      color: #000000; }
+    .home-hero .hero-container .hero-intro {
+      max-width: 45%;
+      margin-top: 50px; }
+      .home-hero .hero-container .hero-intro p {
+        text-align: right;
+        line-height: 2rem; }
+    .home-hero .hero-container .socials-container {
+      display: flex;
+      position: absolute;
+      bottom: 25px;
+      right: 4%; }
+      .home-hero .hero-container .socials-container a {
+        font-size: 2rem;
+        color: #000000; }
+      .home-hero .hero-container .socials-container .linkedin {
+        margin-right: 25px; }
+
+.about-me {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .about-me .about-container {
+    background-color: #ffffff;
+    padding: 25px;
+    -webkit-box-shadow: 7px 7px 8px 0px #c7c7c7;
+    -moz-box-shadow: 7px 7px 8px 0px #c7c7c7;
+    box-shadow: 7px 7px 8px 0px #c7c7c7;
+    max-width: 1240px;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative; }
+    .about-me .about-container .absolute-square {
+      position: absolute;
+      height: 250px;
+      width: 250px;
+      border: 4px solid black;
+      top: -40px;
+      left: -40px;
+      z-index: -9; }
