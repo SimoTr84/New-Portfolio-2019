@@ -1,5 +1,4 @@
 .home-hero {
-  //background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
   background-image: url("assets/Simone-2.jpg");
   opacity: 1;
   -webkit-background-size: cover;
@@ -49,7 +48,6 @@
 }
 
 .about-me {
-  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +77,76 @@
   }
 }
 
-
+.projects {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
+  .title-container {
+  }
+  .row {
+    display: flex;
+    .project-image-container {
+      position: relative;
+      max-width: 50%;
+      overflow: hidden;
+      .project-image-overlay {
+        background: $beige-07;
+        position: absolute;
+        height: 99%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+      }
+      .project-image{
+        max-width: 100%;
+        height: auto;
+      }
+      .image-overlay-details {
+        position: absolute;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+        .overlay-text {
+          color: $black;
+        }
+        .fadeIn-bottom{
+          top: 80%;
+        }
+      }
+      &:hover {
+        .project-image-overlay {
+          opacity: 1;
+        }
+        .image-overlay-details{
+          top: 50%;
+          left: 50%;
+          opacity: 1;
+        }
+      }
+    }
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+  }
+}
 
 
 
