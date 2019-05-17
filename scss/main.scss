@@ -1,3 +1,4 @@
+// Hero Banner
 .home-hero {
   background-image: url("assets/Simone-2.jpg");
   opacity: 1;
@@ -18,9 +19,24 @@
     align-items: flex-end;
     padding-right: 5%;
     .hero-title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 2rem;
       h1 {
         font-size: 4rem;
         color: $black;
+        position: relative;
+        line-height: 7rem;
+        &:after {
+          content: "";
+          position: absolute;
+          background-color: $black;
+          height: 4px;
+          width: 150px;
+          bottom: 0;
+          right: -15px
+        }
       }
     }
     .hero-intro {
@@ -47,6 +63,7 @@
   }
 }
 
+// About Section
 .about-me {
   display: flex;
   flex-direction: column;
@@ -74,18 +91,59 @@
       left: -40px;
       z-index: -9;
     }
+    .about-title-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      .about-title {
+        position: relative;
+        line-height: 5rem;
+        &:after {
+          content: "";
+          position: absolute;
+          background-color: $light-blue;
+          height: 4px;
+          width: 150px;
+          bottom: 0;
+          right: -15px
+        }
+      }
+    }
+
   }
 }
 
+// Projects Section
 .projects {
   display: flex;
   flex-direction: column;
   padding-left: 0;
   padding-right: 0;
-  .title-container {
+  .section-title-container {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    .section-title {
+      position: relative;
+      max-width: 50%;
+      line-height: 5rem;
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: $light-blue;
+        height: 4px;
+        width: 150px;
+        bottom: 0;
+        right: -15px
+      }
+    }
   }
   .row {
     display: flex;
+    min-height: 20rem;
     .project-image-container {
       position: relative;
       max-width: 50%;
@@ -105,8 +163,8 @@
         transition: all 0.4s ease-in-out 0s;
       }
       .project-image{
-        max-width: 100%;
-        height: auto;
+        max-width: auto;
+        height: 100%;
       }
       .image-overlay-details {
         position: absolute;
@@ -146,9 +204,78 @@
       align-items: center;
       justify-content: center;
       width: 50%;
+      .project-container-inner {
+        position: relative;
+        max-width: 60%;
+        padding: 15px;
+        background-color: $white;
+        -webkit-box-shadow: 7px 7px 8px 0px rgba(199,199,199,1);
+        -moz-box-shadow: 7px 7px 8px 0px rgba(199,199,199,1);
+        box-shadow: 7px 7px 8px 0px rgba(199,199,199,1);
+        .absolute-square-project {
+          position: absolute;
+          height: 150px;
+          width: 150px;
+          border: 2px solid black;
+          z-index: -9;
+        }
+        .project-title {
+          margin-bottom: 1rem;
+        }
+        .project-description {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+        .project-link {
+          text-decoration: none;
+          color: $black;
+          padding-bottom: 10px;
+          -webkit-transition: all 0.4s ease-in-out;
+          -moz-transition: all 0.4s ease-in-out;
+          -ms-transition: all 0.4s ease-in-out;
+          -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+          &:hover {
+            //font-weight: bold;
+            border-bottom: 2px solid $black;
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+  .row-odd {
+    .project-container {
+      .project-container-inner {
+        -webkit-box-shadow: 7px 7px 8px 0px rgba(199,199,199,1);
+        -moz-box-shadow: 7px 7px 8px 0px rgba(199,199,199,1);
+        box-shadow: 7px 7px 8px 0px rgba(199,199,199,1);
+        .absolute-square-project {
+          top: -30px;
+          left: -50px;
+        }
+      }
+    }
+  }
+  .row-even {
+    .project-container {
+      .project-container-inner {
+        -webkit-box-shadow: -7px 8px 7px 0px rgba(199,199,199,1);
+        -moz-box-shadow: -7px 8px 7px 0px rgba(199,199,199,1);
+        box-shadow: -7px 8px 7px 0px rgba(199,199,199,1);
+        .absolute-square-project {
+          top: -30px;
+          right: -50px;
+        }
+      }
     }
   }
 }
 
+.ga-projects {
+  display: flex;
+  .ga-project {
 
+  }
+}
 
