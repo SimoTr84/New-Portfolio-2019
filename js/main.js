@@ -6,9 +6,9 @@ $(document).ready(function(){
 });
 
 // Parallax.js
-$(document).ready(function(){
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene);
-});
+// $(document).ready(function(){
+//     var scene = document.getElementById('scene');
+//     var parallaxInstance = new Parallax(scene);
+// });
 
 

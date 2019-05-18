@@ -1,9 +1,20 @@
 $desktop: 1440px;
 $laptop: 1024px;
+$nine-fifty: 950px;
 $tablet: 768px;
 $mobile: 640px;
 
 
+@mixin laptop {
+  @media (max-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin nine-fifty {
+  @media (max-width: #{$nine-fifty}) {
+    @content;
+  }
+}
 @mixin tablet {
   @media (max-width: #{$tablet}) {
     @content;
