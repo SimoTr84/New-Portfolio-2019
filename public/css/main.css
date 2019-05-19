@@ -3,6 +3,9 @@
   padding: 0;
   margin: 0; }
 
+html {
+  scroll-behavior: smooth; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Libre Baskerville", monospace; }
 
@@ -52,7 +55,7 @@ section {
       bottom: 0;
       right: -15px; }
 
-.project-link {
+.project-link, .cta-link {
   text-decoration: none;
   color: #000000;
   padding-bottom: 10px;
@@ -61,9 +64,22 @@ section {
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
-  .project-link:hover {
+  .project-link:hover, .cta-link:hover {
     border-bottom: 2px solid #000000;
     padding-bottom: 5px; }
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem; }
+  .cta .cta-container {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1024px;
+    width: 50%; }
+    .cta .cta-container .cta-link {
+      font-size: 1.5rem; }
 
 header .mobile-menu {
   position: fixed;
@@ -174,21 +190,15 @@ header .mobile-menu {
           width: 150px;
           bottom: 0;
           right: -15px; }
-    .home-hero .hero-container .hero-intro {
-      max-width: 45%;
-      margin-top: 50px; }
-      .home-hero .hero-container .hero-intro p {
-        text-align: right;
-        line-height: 2rem; }
     .home-hero .hero-container .socials-container {
       display: flex;
+      align-items: flex-end;
       position: absolute;
       bottom: 25px;
       right: 4%; }
       .home-hero .hero-container .socials-container a {
         font-size: 2rem;
-        color: #000000; }
-      .home-hero .hero-container .socials-container .linkedin {
+        color: #000000;
         margin-right: 25px; }
 
 .about-me {
@@ -239,7 +249,8 @@ header .mobile-menu {
   display: flex;
   flex-direction: column;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  margin-bottom: 3rem; }
   .projects .row {
     display: flex;
     min-height: 20rem; }
@@ -346,7 +357,6 @@ header .mobile-menu {
   display: flex;
   flex-direction: column;
   min-height: 32rem;
-  margin-bottom: 3rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: #DDD8D5; }
@@ -388,12 +398,12 @@ header .mobile-menu {
         z-index: 10; }
         .ga-projects .ga-projects-container .ga-project .description-container .description-inner:before {
           content: '';
-          height: 100px;
-          width: 100px;
+          height: 70px;
+          width: 70px;
           border: 2px solid #000000;
           position: absolute;
-          top: -25px;
-          left: -10px;
+          top: -20px;
+          left: 0px;
           z-index: -1; }
         .ga-projects .ga-projects-container .ga-project .description-container .description-inner .ga-project-description {
           padding: 1rem 1rem;
@@ -411,3 +421,35 @@ header .mobile-menu {
           -ms-transition: all 0.4s ease-in-out;
           -o-transition: all 0.4s ease-in-out;
           transition: all 0.4s ease-in-out; }
+
+footer {
+  background-color: #000000; }
+  footer .top-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 2rem 0; }
+    footer .top-footer .footer-title {
+      text-align: center;
+      padding-bottom: 2rem; }
+    footer .top-footer .footer-inner {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 3rem;
+      width: 100%;
+      max-width: 1240px; }
+      footer .top-footer .footer-inner .top-footer-column {
+        color: #ffffff; }
+        footer .top-footer .footer-inner .top-footer-column a {
+          color: #ffffff;
+          font-size: 2rem; }
+  footer .bottom-footer {
+    height: 1.5rem;
+    padding-bottom: 1rem;
+    text-align: center; }
+    footer .bottom-footer p {
+      color: #ffffff; }

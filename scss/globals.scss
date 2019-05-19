@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font;
 }
@@ -59,7 +63,7 @@ section {
   }
 }
 
-.project-link {
+.project-link, .cta-link {
   text-decoration: none;
   color: $black;
   padding-bottom: 10px;
@@ -72,5 +76,21 @@ section {
     //font-weight: bold;
     border-bottom: 2px solid $black;
     padding-bottom: 5px;
+  }
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  .cta-container {
+    display: flex;
+    justify-content: space-evenly ;
+    max-width: 1024px;
+    width: 50%;
+    .cta-link {
+      font-size: 1.5rem;
+    }
   }
 }
