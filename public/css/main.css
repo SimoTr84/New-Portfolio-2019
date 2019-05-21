@@ -77,9 +77,18 @@ section {
     display: flex;
     justify-content: space-evenly;
     max-width: 1024px;
-    width: 50%; }
+    min-width: 50%; }
+    @media (max-width: 768px) {
+      .cta .cta-container {
+        flex-direction: column; } }
     .cta .cta-container .cta-link {
       font-size: 1.5rem; }
+      @media (max-width: 768px) {
+        .cta .cta-container .cta-link {
+          text-align: center; } }
+      @media (max-width: 768px) {
+        .cta .cta-container .cta-link:first-child {
+          margin-bottom: 1rem; } }
 
 header .mobile-menu {
   position: fixed;
@@ -124,6 +133,9 @@ header .mobile-menu {
     justify-content: center;
     background-color: #ffffff;
     opacity: .9; }
+    @media (max-width: 640px) {
+      header .mobile-menu nav {
+        width: 70vw; } }
     header .mobile-menu nav ul {
       text-transform: uppercase;
       list-style-type: none;
@@ -151,7 +163,10 @@ header .mobile-menu {
     transform: rotateZ(-45deg);
     top: 16px; }
   header .mobile-menu.open nav {
-    right: 80%; }
+    right: 120%; }
+    @media (max-width: 640px) {
+      header .mobile-menu.open nav {
+        right: 40%; } }
 
 .home-hero {
   background-image: url("assets/Simone-2.jpg");
@@ -165,6 +180,9 @@ header .mobile-menu {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
+  @media (max-width: 640px) {
+    .home-hero {
+      background-position: -65px 0; } }
   .home-hero .hero-container {
     height: 50%;
     display: flex;
@@ -222,11 +240,11 @@ header .mobile-menu {
     position: relative; }
     .about-me .about-container .absolute-square {
       position: absolute;
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
       border: 4px solid black;
-      top: -40px;
-      left: -40px;
+      top: -20px;
+      left: -20px;
       z-index: -9; }
     .about-me .about-container .about-title-container {
       display: flex;
@@ -339,8 +357,8 @@ header .mobile-menu {
     -moz-box-shadow: 7px 7px 8px 0px #c7c7c7;
     box-shadow: 7px 7px 8px 0px #c7c7c7; }
     .projects .row-odd .project-container .project-container-inner .absolute-square-project {
-      top: -30px;
-      left: -50px; }
+      top: -20px;
+      left: -20px; }
   @media (max-width: 950px) {
     .projects .row-even {
       flex-direction: column-reverse;
@@ -350,8 +368,8 @@ header .mobile-menu {
     -moz-box-shadow: -7px 8px 7px 0px #c7c7c7;
     box-shadow: -7px 8px 7px 0px #c7c7c7; }
     .projects .row-even .project-container .project-container-inner .absolute-square-project {
-      top: -30px;
-      right: -50px; }
+      top: -20px;
+      right: -20px; }
 
 .ga-projects {
   display: flex;
@@ -360,8 +378,10 @@ header .mobile-menu {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: #DDD8D5; }
-  .ga-projects .section-title-container .section-title:after {
-    background-color: #000000; }
+  .ga-projects .section-title-container .section-title {
+    max-width: unset; }
+    .ga-projects .section-title-container .section-title:after {
+      background-color: #000000; }
   .ga-projects .ga-projects-container {
     display: flex;
     justify-content: space-around;
